@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- Не локализовала шрифты *в css файле причина* -->
     <link rel="stylesheet" href="css/style.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Raleway:wght@400;700&display=swap"
@@ -12,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -27,6 +29,25 @@
             </a>
             <div class="flex-nav">
                 <nav class="navigation">
+                    <label for="navigation-menu" class="nav-menu-label">
+                        <?xml version="1.0" ?><svg style="enable-background:new 0 0 139 139;" version="1.1"
+                            viewBox="0 0 139 139" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <style type="text/css">
+                                .st0 {
+                                    fill: none;
+                                    stroke: #ffffff;
+                                    stroke-width: 6;
+                                    stroke-miterlimit: 10;
+                                }
+                            </style>
+                            <line class="st0" id="XMLID_6_" x1="26.5" x2="112.5" y1="46.3" y2="46.3" />
+                            <line class="st0" id="XMLID_9_" x1="26.5" x2="112.5" y1="92.7" y2="92.7" />
+                            <line class="st0" id="XMLID_8_" x1="26.5" x2="112.5" y1="69.5" y2="69.5" />
+                        </svg>
+                        <span></span>
+                    </label>
+                    <input type="checkbox" id="navigation-menu">
                     <ul class="navigation-menu">
                         <li class="menu-txt">
                             <a href="#" class="nav-txt">Home</a>
@@ -309,7 +330,7 @@
                 <button class="video-btn">
                     <svg class="btn-play" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                         viewBox="0 0 80 76">
-                        <path fill-rule="evenodd" fill="#ffffff"
+                        <path fill-rule="evenodd" fill="#ffffff" class="btn-play-svg"
                             d="M34.933594,56.81958 C34.637512,56.81958 34.339172,56.755127 34.060303,56.62549 C33.336792,56.28662 32.874207,55.559082 32.874207,54.760254 C32.874207,54.760254 32.874207,25.235107 32.874207,25.235107 C32.874207,24.436035 33.336548,23.708252 34.060303,23.369629 C34.783447,23.030273 35.639526,23.141113 36.252625,23.652588 C36.252625,23.652588 53.967285,38.415283 53.967285,38.415283 C54.437073,38.80664 54.70862,39.38623 54.70862,39.997314 C54.70862,40.609375 54.437256,41.188477 53.967285,41.580322 C53.967285,41.580322 36.252625,56.34253 36.252625,56.34253 C35.87567,56.65674 35.4068,56.81958 34.933594,56.81958 ZM36.99408,29.632812 C36.99408,29.632812 36.99408,50.362305 36.99408,50.362305 C36.99408,50.362305 49.431274,39.997314 49.431274,39.997314 C49.431274,39.997314 36.99408,29.632812 36.99408,29.632812 ZM39.93683,74.99829 C34.072144,74.99902 28.173218,73.53589 22.830505,70.52759 C21.839355,69.96997 21.487915,68.71338 22.046387,67.72217 C22.603699,66.73096 23.860046,66.37891 24.851929,66.937744 C36.869812,73.703125 52.082397,71.61157 61.845276,61.845215 C73.89203,49.798096 73.89203,30.19751 61.845276,18.149902 C49.7984,6.1013184 30.19629,6.1018066 18.150024,18.149902 C6.10376,30.19751 6.10376,49.798096 18.150024,61.845215 C18.954529,62.649414 18.954529,63.954346 18.150024,64.75903 C17.346497,65.56348 16.04187,65.56348 15.237244,64.75903 C1.5844727,51.104736 1.5844727,28.890137 15.237244,15.236084 C28.890625,1.5842285 51.104065,1.5830078 64.75903,15.236084 C78.411865,28.890137 78.411865,51.104736 64.75903,64.75903 C58.033325,71.484375 49.025696,74.99829 39.93683,74.99829 Z" />
                     </svg></button>
                 <span class="video-title">Waxom Video Presentation</span>
@@ -319,7 +340,6 @@
             </div>
         </section>
         <section class="mobile">
-            <img src="img/iphone.png" alt="phone" class="phone-img" width="420" height="615">
             <div class="mobile-txt">
                 <h2 class="mobile-title">Excellent for Mobile Devices.</h2>
                 <p class="mobile-p">Qisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
@@ -327,12 +347,15 @@
                     nisl ut aliquip ex ea commodo consequat. Investigationes demonstraverunt lectores legere me lius
                     quod ii legunt saepius claritas. Eodem modo typi, qui nunc nobis videntur parum clari, fiant
                     sollemnes in futurum.</p>
-                <ul class="mobile-ul">
-                    <li class="mobile-link">Nam liber tempor cum soluta nobis eleifend option;</li>
-                    <li class="mobile-link">Option congue nihil imperdiet doming id quod mazim placerat facer;</li>
-                    <li class="mobile-link">Eodem modo typi, qui nunc nobis videntur parum futurum;</li>
-                    <li class="mobile-link">Investigationes demonstraverunt lectores;</li>
-                </ul>
+                <div class="mobile-flex">
+                    <ul class="mobile-ul">
+                        <li class="mobile-link">Nam liber tempor cum soluta nobis eleifend option;</li>
+                        <li class="mobile-link">Option congue nihil imperdiet doming id quod mazim placerat facer;</li>
+                        <li class="mobile-link">Eodem modo typi, qui nunc nobis videntur parum futurum;</li>
+                        <li class="mobile-link">Investigationes demonstraverunt lectores;</li>
+                    </ul>
+                    <img src="img/iphone.png" alt="phone" class="phone-img" width="420" height="615">
+                </div>
             </div>
         </section>
         <aside class="statistics">
@@ -391,7 +414,8 @@
         </aside>
         <section class="post-feed">
             <h2 class="feed-title">Recent Posts.</h2>
-            <p class="feed-p">Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas
+            <p class="feed-p">Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.
+                Claritas
                 est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
             <div class="post-flex">
                 <div class="post">

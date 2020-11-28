@@ -1,11 +1,25 @@
+/* Я попыталась локализировать шрифты, но сайт "поломался" от этого, поэтому видимо не правильно применила */
+/* 
+@font-face{
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat/Montserrat-Regular.ttf');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway/Raleway-VariableFont_wght.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'Roboto';
+	src: url('../fonts/Roboto/Roboto-Regular.ttf');
+} */
 body{
-    width: 1920px;   
+    max-width: 1920px;   
     margin: 0 auto;
 }
- /* .container{
-    width: 1920px;   
-    margin: 0 auto;
-}  */
 /* Top block with background image */
 .top-header{
     background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url(../img/background_image_header.png);
@@ -19,7 +33,7 @@ body{
 }
 .logo-link{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-betweens;
     align-items: center;
     text-decoration: none;
     color: #fff;
@@ -94,7 +108,7 @@ body{
     margin: 50px 0 0 0;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 .logo-icon{
     fill: #ffffff;
@@ -135,14 +149,19 @@ body{
 .nav-txt:hover{
     color: #c7b299;
 }
+.nav-menu-label{
+    display: none;
+}
 .menu-txt{
     float: left;
     position: relative;
     margin: 0 30px 0 0;
 }
+#navigation-menu{
+    display: none;
+  }
 .flex-top{
     display: flex;
-    justify-content: space-around;
 }
 
 .flex-top:first-child{
@@ -272,6 +291,9 @@ body{
     background-color: transparent;
     border: 2px solid #d3c1ad;
     transform: scale(1.2);
+}
+.btn-start:hover{
+    background-color: #615855;
 }
 /* Second block with examples of what are they doing*/
 .what-to-do{
@@ -426,6 +448,9 @@ body{
     text-decoration: none;
     background-color: #998675;
 }
+.btn-purchase:hover{
+    background-color: #615855;
+}
 .btn-purchase-txt{
     font-family: 'Raleway', sans-serif;
     color: #ffffff;
@@ -577,6 +602,9 @@ body{
     text-decoration: none;
     background-color: #998675;
 }
+.btn-load:hover{
+    background-color: #615855;
+}
 .btn-load-txt{
     font-family: 'Raleway', sans-serif;
     color: #ffffff;
@@ -622,6 +650,9 @@ body{
     background: rgba(17,17,17, 0.3);
     border-style: none; 
 }
+.video-btn:hover .btn-play-svg{
+    fill:#998675;
+}
 .video-title {
     font-family: Raleway;
     font-size: 30px;
@@ -659,6 +690,7 @@ body{
     padding: 80px 0 0 0;
     display: flex;
     justify-content: center;
+    flex-direction: row-reverse;
 }
 .mobile-txt{
     margin: 100px 0 0 0;
@@ -691,6 +723,9 @@ body{
     margin: 0 20px 0 0;
     position: relative;
     top: 5px;
+}
+.mobile-flex{
+    display: flex;flex-direction: row-reverse;
 }
 /* Seventh block - statistics block */
 .statistics{
@@ -1100,4 +1135,166 @@ body{
 }
 .waxom-txt{
     color: #959595; 
+}
+/* Mobile version */
+
+@media (max-width: 605px){
+/* Top menu */
+.navigation{
+    min-height: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+.flex-top{
+  display: flex;
+  justify-content: center;
+}
+.nav-menu-label {
+    display: block;
+    width: 60px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+.navigation-menu{
+    visibility: hidden;
+    height: 0;
+    width: 0;
+    flex-direction: column;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    
+    right: 10%;
+  }
+
+.menu-txt{
+    min-height: 40px;
+    text-align: center;
+    margin-top: 2px;
+}
+.nav-txt{
+    width: 100%;
+}
+input[type="checkbox"]:checked ~ .navigation-menu {
+    visibility: visible;
+    height: auto;
+    width: 100%;
+  }
+.cart-search{
+    display: none;
+}
+.top-subheader{
+    display: none;
+}
+.top-header{
+    min-height: 140px;
+    background-size: 100% 100%;
+    background-position: bottom;
+}
+.logo{
+    position: relative;
+    
+}
+/* Examples of work */
+.features-flex{
+display: flex;
+flex-wrap: wrap;
+max-width: 605px;
+}
+.features{
+    margin: 0 0 20px 0;
+}
+.ideas{
+    display: none;
+}
+/* Blocks to delete */
+.advert{
+    display: none;
+}
+.ideas-p{
+    max-width: 600px;
+}
+/* Projects */
+.project-options-menu{
+display: flex;
+
+justify-content: center;
+flex-wrap: wrap;
+width: 450px;
+}
+.projects-options{
+    margin: 0 5px 10px 0;
+}
+.latest-projects-flex{
+    display: none;
+}
+/* Mobile */
+.mobile{
+    display: block;
+}
+.phone-img{
+    width: 260px;
+    height: 370px;
+}
+.mobile-link{
+    font-size: 10px;
+}
+.mobile-ul{
+    margin: 0;
+    padding: 0;
+}
+.mobile-p{
+    font-size: 12px;
+    align-items: center;
+    width: 550px;
+    margin: 0 0 20px 30px;
+}
+.mobile-title{
+    margin: 0 0 10px 30px;
+    text-align: center;
+}
+.mobile-txt{
+    margin: 0;
+}
+/* Posts */
+.feed-p{
+    width: 600px;
+}
+.post-flex{
+    flex-direction: column;
+    align-items: center;
+}
+.btn-post{
+    display: none;
+}
+/* Sponsors */
+.sponsors{
+    background-size: cover;
+    max-height: 180px;
+}
+.sponsors-logo{
+    width: 80px;
+    height: 70px;
+    margin: 0 50px 0 30px;
+    padding: 40px 0 40px 0;
+}
+.sponsors-logo-flex{
+    padding: 30px 0 70px 0;
+    height: auto;
+}
+/* Remove block with twits */
+.footer-main{
+display: none;
+}
+/* Footer - copyright  */
+.footer-copyright{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 }
